@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sirahauzi Trailers Service | All-India Transport &amp; Trailer Logistics, Jamshedpur</title>
+<meta name="description" content="Sirahauzi Trailers Service — reliable trailer and full truck load transport across India, based in Jamshedpur, Jharkhand. Safe, on-time, transparent logistics for steel, mining, construction and manufacturing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          charcoal: { DEFAULT: '#1F2937', 900: '#111827' },
+          gold: { DEFAULT: '#F59E0B', light: '#FEF3C7', deep: '#B45309' },
+          steel: '#64748B',
+          mist: '#F8FAFC',
+        },
+        fontFamily: {
+          heading: ['Poppins', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: #1F2937; }
+  h1,h2,h3,h4, .font-heading { font-family: 'Poppins', sans-serif; }
+
+  /* Route motif: dashed line evoking a highway route */
+  .route-line {
+    background-image: repeating-linear-gradient(to right, #F59E0B 0, #F59E0B 10px, transparent 10px, transparent 20px);
+    height: 3px;
+  }
+  .route-line-v {
+    background-image: repeating-linear-gradient(to bottom, #F59E0B 0, #F59E0B 10px, transparent 10px, transparent 20px);
+    width: 3px;
+  }
+  .stop-marker {
+    width: 14px; height: 14px; border-radius: 9999px; background:#F59E0B;
+    box-shadow: 0 0 0 4px #FEF3C7;
+  }
+  .card-hover { transition: transform .25s ease, box-shadow .25s ease; }
+  .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -12px rgba(31,41,55,0.18); }
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content:''; position:absolute; left:0; bottom:-6px; width:0; height:2px; background:#F59E0B;
+    transition: width .2s ease;
+  }
+  .nav-link:hover::after { width:100%; }
+  ::selection { background:#F59E0B; color:#1F2937; }
+  .skip-link:focus { transform: translateY(0); }
+  a, button { -webkit-tap-highlight-color: transparent; }
+  *:focus-visible { outline: 2px solid #F59E0B; outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+
+<!-- Schema markup for logistics business -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MovingCompany",
+  "name": "Sirahauzi Trailers Service",
+  "image": "https://example.com/og-image.jpg",
+  "description": "All-India trailer and transport logistics company offering full truck load, industrial, mining, construction and manufacturing supply chain transport services.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Jamshedpur",
+    "addressRegion": "Jharkhand",
+    "addressCountry": "IN"
+  },
+  "telephone": "+91-9973023786",
+  "email": "contactsirahauzitrailerservice@gmail.com",
+  "areaServed": "IN",
+  "priceRange": "$$",
+  "url": "https://www.sirahauzitrailers.com"
+}
+</script>
+</head>
+<body class="bg-white antialiased">
+
+<a href="#main" class="skip-link sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 bg-gold text-charcoal px-4 py-2 rounded-md font-semibold">Skip to content</a>
+
+<!-- ============ NAV ============ -->
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 h-20 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3">
+  <img
+    src="/assets/sts-logo.png"
+    alt="STS Logo"
+    class="h-12 w-auto"
+  />
+
+  <span class="font-heading font-bold text-xl text-charcoal">
+    SIRAHAUZI <span class="text-steel">TRAILERS SERVICE</span>
+  </span>
+</a>
+
+    <nav class="hidden lg:flex items-center gap-8 font-heading text-sm font-medium text-charcoal">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#industries" class="nav-link">Industries</a>
+      <a href="#why-us" class="nav-link">Why Us</a>
+      <a href="#technology" class="nav-link">Technology</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="hidden md:flex items-center gap-3">
+      <a href="tel:+919973023786" class="text-sm font-semibold text-charcoal hover:text-gold-deep">+91 99730 23786</a>
+      <a href="book.html" class="bg-gold hover:bg-gold-deep text-charcoal font-heading font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors">Book Transport</a>
+    </div>
+
+    <button id="menuBtn" aria-label="Open menu" aria-expanded="false" class="lg:hidden p-2 text-charcoal">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-gray-100 bg-white px-5 py-4 space-y-3 font-heading text-sm font-medium">
+    <a href="#about" class="block py-1">About</a>
+    <a href="#services" class="block py-1">Services</a>
+    <a href="#industries" class="block py-1">Industries</a>
+    <a href="#why-us" class="block py-1">Why Us</a>
+    <a href="#technology" class="block py-1">Technology</a>
+    <a href="#testimonials" class="block py-1">Reviews</a>
+    <a href="#faq" class="block py-1">FAQ</a>
+    <a href="#contact" class="block py-1">Contact</a>
+    <a href="book.html" class="block text-center bg-gold text-charcoal font-semibold px-5 py-2.5 rounded-lg mt-2">Book Transport</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section id="hero" class="relative overflow-hidden bg-mist">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 pt-14 md:pt-20 pb-16 md:pb-24 grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <span class="inline-flex items-center gap-2 bg-gold-light text-gold-deep text-xs font-heading font-semibold px-3 py-1.5 rounded-full">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="#B45309" stroke-width="1.6"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="#B45309" stroke-width="1.6"/></svg>
+        All-India Trailer &amp; Transport Network
+      </span>
+      <h1 class="font-heading font-extrabold text-4xl md:text-5xl xl:text-6xl text-charcoal leading-[1.08] mt-5">
+        Moving Goods.<br><span class="text-gold-deep">Building Trust.</span>
+      </h1>
+      <p class="text-steel text-base md:text-lg mt-6 max-w-xl leading-relaxed">
+        Reliable trailer and transport solutions across India with a commitment to safety, transparency, and on-time delivery.
+      </p>
+
+      <div class="flex flex-wrap gap-4 mt-8">
+        <a href="book.html" class="bg-charcoal hover:bg-charcoal-900 text-white font-heading font-semibold px-7 py-3.5 rounded-lg transition-colors">Book Transport</a>
+        <a href="fare-calculator.html" class="border-2 border-charcoal text-charcoal font-heading font-semibold px-7 py-3.5 rounded-lg hover:bg-charcoal hover:text-white transition-colors">Get a Quote</a>
+      </div>
+
+      <!-- Trust indicators -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-12">
+        <div>
+          <p class="font-heading font-bold text-charcoal text-sm">All India Service</p>
+          <p class="text-xs text-steel mt-0.5">Pan-India coverage</p>
+        </div>
+        <div>
+          <p class="font-heading font-bold text-charcoal text-sm">On-Time Delivery</p>
+          <p class="text-xs text-steel mt-0.5">Punctual, every route</p>
+        </div>
+        <div>
+          <p class="font-heading font-bold text-charcoal text-sm">Trusted by Businesses</p>
+          <p class="text-xs text-steel mt-0.5">Across industries</p>
+        </div>
+        <div>
+          <p class="font-heading font-bold text-charcoal text-sm">Safe &amp; Secure</p>
+          <p class="text-xs text-steel mt-0.5">Cargo handled with care</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Visual: trailer + India route illustration -->
+    <div class="relative">
+     <div class="rounded-2xl overflow-hidden shadow-xl aspect-[4/3]">
+  <img
+    src="/assets/first.png"
+    alt="SIRAHAUZI TRAILERS SERVICE truck"
+    class="w-full h-full object-cover"
+  />
+  
+</div>
+      <div class="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg px-5 py-4 hidden sm:block">
+        <p class="font-heading font-bold text-charcoal text-2xl">28+ States</p>
+        <p class="text-xs text-steel">Routes covered nationwide</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 grid lg:grid-cols-2 gap-14 items-center">
+    <div>
+      <p class="font-heading text-gold-deep font-semibold text-sm tracking-wide uppercase">About Sirahauzi Trailers Service</p>
+      <h2 class="font-heading font-bold text-3xl md:text-4xl text-charcoal mt-3 leading-tight">
+        Built on the highways of Jharkhand, trusted across India.
+      </h2>
+      <p class="text-steel mt-6 leading-relaxed">
+        Sirahauzi Trailers Service was founded in Jamshedpur, Jharkhand — a city built on steel and industry — with a simple goal: move goods as reliably as the factories that depend on them. What began as a regional trailer service has grown into a nationwide transportation network, carrying everything from raw materials to finished products across India's highways.
+      </p>
+      <p class="text-steel mt-4 leading-relaxed">
+        Every shipment we carry represents a customer's commitment to their own business. That's why our operations are built around transparency, accountability, and a genuine focus on customer satisfaction — not just delivering loads, but delivering confidence.
+      </p>
+      <div class="grid grid-cols-3 gap-6 mt-10 border-t border-gray-100 pt-8">
+        <div>
+          <p class="font-heading font-extrabold text-3xl text-charcoal">Jamshedpur</p>
+          <p class="text-xs text-steel mt-1">Headquarters, Jharkhand</p>
+        </div>
+        <div>
+          <p class="font-heading font-extrabold text-3xl text-charcoal">Pan-India</p>
+          <p class="text-xs text-steel mt-1">Transport network</p>
+        </div>
+        <div>
+          <p class="font-heading font-extrabold text-3xl text-charcoal">100%</p>
+          <p class="text-xs text-steel mt-1">Focus on customer trust</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative">
+      <div class="rounded-2xl overflow-hidden shadow-xl aspect-[4/3]">
+  <img
+    src="/assets/second.png"
+    alt="SIRAHAUZI TRAILERS SERVICE truck"
+    class="w-full h-full object-cover"
+  />
+  
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="py-20 md:py-28 bg-mist">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="max-w-2xl">
+      <p class="font-heading text-gold-deep font-semibold text-sm tracking-wide uppercase">Our Services</p>
+      <h2 class="font-heading font-bold text-3xl md:text-4xl text-charcoal mt-3">End-to-end transport, built for industry.</h2>
+      <p class="text-steel mt-4">From a single trailer load to ongoing supply chain support, we cover every link in the logistics chain.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+      <!-- card template -->
+      <div class="card-hover bg-white rounded-2xl p-7 shadow-sm border border-gray-100">
+        <div class="w-12 h-12 rounded-lg bg-gold-light flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="13" height="9" rx="1.5" stroke="#B45309" stroke-width="1.8"/><path d="M15 10h3l3 3v3h-6" stroke="#B45309" stroke-width="1.8"/><circle cx="6" cy="18" r="1.8" stroke="#B45309" stroke-width="1.6"/><circle cx="18" cy="18" r="1.8" stroke="#B45309" stroke-width="1.6"/></svg>
+        </div>
+        <h3 class="font-heading font-semibold text-lg text-charcoal">Full Truck Load (FTL)</h3>
+        <p class="text-steel text-sm mt-2 leading-relaxed">Dedicated, full-capacity loads moved direct from origin to destination — no sharing, no delays.</p>
+      </div>
+
+      <div class="card-hover bg-white rounded-2xl p-7 shadow-sm border border-gray-100">
+        <div class="w-12 h-12 rounded-lg bg-gold-light flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="1" y="9" width="22" height="8" rx="1.5" stroke="#B45309" stroke-width="1.8"/><circle cx="6" cy="19" r="1.8" stroke="#B45309" stroke-width="1.6"/><circle cx="18" cy="19" r="1.8" stroke="#B45309" stroke-width="1.6"/></svg>
+        </div>
+        <h3 class="font-heading font-semibold text-lg text-charcoal">Trailer Transportation</h3>
+        <p class="text-steel text-sm mt-2 leading-relaxed">Heavy-duty trailers for oversized and high-volume cargo, equipped for India's diverse terrain.</p>
+      </div>
+
+      <div class="card-hover bg-white rounded-2xl p-7 shadow-sm border border-gray-100">
+        <div class="w-12 h-12 rounded-lg bg-gold-light flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 21V9l5-4 5 4v12" stroke="#B45309" stroke-width="1.8"/><path d="M13 21V13l5-3 3 3v8" stroke="#B45309" stroke-width="1.8"/></svg>
+        </div>
+        <h3 class="font-heading font-semibold text-lg text-charcoal">Industrial Goods Transport</h3>
+        <p class="text-steel text-sm mt-2 leading-relaxed">Specialised handling for steel, machinery, and industrial materials moving between plants.</p>
+      </div>
+
+      <div class="card-hover bg-white rounded-2xl p-7 shadow-sm border border-gray-100">
+        <div class="w-12 h-12 rounded-lg bg-gold-light flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V10l4-6 4 6v11M13 21v-7l4-4 4 4v7" stroke="#B45309" stroke-width="1.8"/></svg>
+        </div>
+        <h3 class="font-heading font-semibold text-lg text-charcoal">Mining &amp; Construction Logistics</h3>
+        <p class="text-steel text-sm mt-2 leading-relaxed">Reliable haulage for aggregates, ore, and construction materials from site to site.</p>
+      </div>
+
+      <div class="card-hover bg-white rounded-2xl p-7 shadow-sm border border-gray-100">
+        <div class="w-12 h-12 rounded-lg bg-gold-light flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3.2" stroke="#B45309" stroke-width="1.8"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2 2M16.4 16.4l2 2M5.6 18.4l2-2M16.4 7.6l2-2" stroke="#B45309" stroke-width="1.6"/></svg>
+        </div>
+        <h3 class="font-heading font-semibold text-lg text-charcoal">Manufacturing Supply Chain</h3>
+        <p class="text-steel text-sm mt-2 leading-relaxed">Scheduled inbound and outbound movement that keeps production lines running on time.</p>
+      </div>
+
+      <div class="card-hover bg-white rounded-2xl p-7 shadow-sm border border-gray-100">
+        <div class="w-12 h-12 rounded-lg bg-gold-light flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="9" width="18" height="12" rx="1.5" stroke="#B45309" stroke-width="1.8"/><path d="M3 9l9-6 9 6" stroke="#B45309" stroke-width="1.8"/><path d="M9 21v-6h6v6" stroke="#B45309" stroke-width="1.6"/></svg>
+        </div>
+        <h3 class="font-heading font-semibold text-lg text-charcoal">Warehousing Support</h3>
+        <p class="text-steel text-sm mt-2 leading-relaxed">Short and long-term storage coordination integrated directly with your transport schedule.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INDUSTRIES ============ -->
+<section id="industries" class="py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="font-heading text-gold-deep font-semibold text-sm tracking-wide uppercase">Industries We Serve</p>
+      <h2 class="font-heading font-bold text-3xl md:text-4xl text-charcoal mt-3">Trusted across India's core industries.</h2>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5 mt-12">
+      <div class="flex flex-col items-center text-center gap-3 p-5 rounded-xl hover:bg-mist transition-colors">
+        <div class="w-14 h-14 rounded-full bg-charcoal flex items-center justify-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 20V8l8-5 8 5v12" stroke="#F59E0B" stroke-width="1.8"/><path d="M9 20v-7h6v7" stroke="#F59E0B" stroke-width="1.8"/></svg></div>
+        <p class="font-heading font-medium text-sm text-charcoal">Steel</p>
+      </div>
+      <div class="flex flex-col items-center text-center gap-3 p-5 rounded-xl hover:bg-mist transition-colors">
+        <div class="w-14 h-14 rounded-full bg-charcoal flex items-center justify-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="9" r="3" stroke="#F59E0B" stroke-width="1.8"/><circle cx="15" cy="15" r="3" stroke="#F59E0B" stroke-width="1.8"/></svg></div>
+        <p class="font-heading font-medium text-sm text-charcoal">Manufacturing</p>
+      </div>
+      <div class="flex flex-col items-center text-center gap-3 p-5 rounded-xl hover:bg-mist transition-colors">
+        <div class="w-14 h-14 rounded-full bg-charcoal flex items-center justify-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V10l4-6 4 6v11M13 21v-7l4-4 4 4v7" stroke="#F59E0B" stroke-width="1.8"/></svg></div>
+        <p class="font-heading font-medium text-sm text-charcoal">Mining</p>
+      </div>
+      <div class="flex flex-col items-center text-center gap-3 p-5 rounded-xl hover:bg-mist transition-colors">
+        <div class="w-14 h-14 rounded-full bg-charcoal flex items-center justify-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 21V9l4-4 4 4v12M12 21V5l4 4v12" stroke="#F59E0B" stroke-width="1.8"/></svg></div>
+        <p class="font-heading font-medium text-sm text-charcoal">Construction</p>
+      </div>
+      <div class="flex flex-col items-center text-center gap-3 p-5 rounded-xl hover:bg-mist transition-colors">
+        <div class="w-14 h-14 rounded-full bg-charcoal flex items-center justify-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="9" width="18" height="12" rx="1.5" stroke="#F59E0B" stroke-width="1.8"/><path d="M3 9l9-6 9 6" stroke="#F59E0B" stroke-width="1.8"/></svg></div>
+        <p class="font-heading font-medium text-sm text-charcoal">Warehousing</p>
+      </div>
+      <div class="flex flex-col items-center text-center gap-3 p-5 rounded-xl hover:bg-mist transition-colors">
+        <div class="w-14 h-14 rounded-full bg-charcoal flex items-center justify-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.2" stroke="#F59E0B" stroke-width="1.8"/><rect x="14" y="3" width="7" height="7" rx="1.2" stroke="#F59E0B" stroke-width="1.8"/><rect x="3" y="14" width="7" height="7" rx="1.2" stroke="#F59E0B" stroke-width="1.8"/><rect x="14" y="14" width="7" height="7" rx="1.2" stroke="#F59E0B" stroke-width="1.8"/></svg></div>
+        <p class="font-heading font-medium text-sm text-charcoal">FMCG</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section id="why-us" class="py-20 md:py-28 bg-charcoal text-white">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="max-w-2xl">
+      <p class="font-heading text-gold font-semibold text-sm tracking-wide uppercase">Why Choose Us</p>
+      <h2 class="font-heading font-bold text-3xl md:text-4xl mt-3">Logistics partners, not just truck owners.</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 mt-12 rounded-2xl overflow-hidden">
+      <div class="bg-charcoal p-8">
+        <p class="font-heading font-bold text-gold text-2xl mb-2">01</p>
+        <h3 class="font-heading font-semibold text-lg">Experienced Team</h3>
+        <p class="text-white/60 text-sm mt-2">Drivers and coordinators who know India's roads and rhythms.</p>
+      </div>
+      <div class="bg-charcoal p-8">
+        <p class="font-heading font-bold text-gold text-2xl mb-2">02</p>
+        <h3 class="font-heading font-semibold text-lg">Transparent Operations</h3>
+        <p class="text-white/60 text-sm mt-2">Clear pricing and honest communication, every shipment.</p>
+      </div>
+      <div class="bg-charcoal p-8">
+        <p class="font-heading font-bold text-gold text-2xl mb-2">03</p>
+        <h3 class="font-heading font-semibold text-lg">On-Time Delivery</h3>
+        <p class="text-white/60 text-sm mt-2">Schedules planned and tracked to protect your timelines.</p>
+      </div>
+      <div class="bg-charcoal p-8">
+        <p class="font-heading font-bold text-gold text-2xl mb-2">04</p>
+        <h3 class="font-heading font-semibold text-lg">Dedicated Support</h3>
+        <p class="text-white/60 text-sm mt-2">A direct line to your coordinator, not a call queue.</p>
+      </div>
+      <div class="bg-charcoal p-8">
+        <p class="font-heading font-bold text-gold text-2xl mb-2">05</p>
+        <h3 class="font-heading font-semibold text-lg">Nationwide Reach</h3>
+        <p class="text-white/60 text-sm mt-2">Routes connecting Jamshedpur to every major industrial hub.</p>
+      </div>
+      <div class="bg-charcoal p-8">
+        <p class="font-heading font-bold text-gold text-2xl mb-2">06</p>
+        <h3 class="font-heading font-semibold text-lg">Safe &amp; Secure Transport</h3>
+        <p class="text-white/60 text-sm mt-2">Cargo secured and insured, handled with consistent care.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TECHNOLOGY (Coming Soon) ============ -->
+<section id="technology" class="py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="font-heading text-gold-deep font-semibold text-sm tracking-wide uppercase">What's Next</p>
+      <h2 class="font-heading font-bold text-3xl md:text-4xl text-charcoal mt-3">The Future of Logistics is Digital.</h2>
+      <p class="text-steel mt-4">We're building digital tools to make booking, tracking, and managing transport simpler — rolling out soon.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+      <div class="relative rounded-2xl border border-gray-100 p-7 bg-mist">
+        <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold tracking-wide uppercase bg-gold-light text-gold-deep px-2.5 py-1 rounded-full">Coming Soon</span>
+        <h3 class="font-heading font-semibold text-lg text-charcoal pr-20">Online Booking System</h3>
+        <p class="text-steel text-sm mt-2">Book a trailer or full truck load directly, in minutes.</p>
+      </div>
+      <div class="relative rounded-2xl border border-gray-100 p-7 bg-mist">
+        <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold tracking-wide uppercase bg-gold-light text-gold-deep px-2.5 py-1 rounded-full">Coming Soon</span>
+        <h3 class="font-heading font-semibold text-lg text-charcoal pr-20">Real-Time Tracking</h3>
+        <p class="text-steel text-sm mt-2">Follow your shipment's location from pickup to delivery.</p>
+      </div>
+      <div class="relative rounded-2xl border border-gray-100 p-7 bg-mist">
+        <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold tracking-wide uppercase bg-gold-light text-gold-deep px-2.5 py-1 rounded-full">Coming Soon</span>
+        <h3 class="font-heading font-semibold text-lg text-charcoal pr-20">Fare Calculator</h3>
+        <p class="text-steel text-sm mt-2">Instant, transparent estimates based on route and load.</p>
+      </div>
+      <div class="relative rounded-2xl border border-gray-100 p-7 bg-mist">
+        <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold tracking-wide uppercase bg-gold-light text-gold-deep px-2.5 py-1 rounded-full">Coming Soon</span>
+        <h3 class="font-heading font-semibold text-lg text-charcoal pr-20">Smart Operations Dashboard</h3>
+        <p class="text-steel text-sm mt-2">A live overview of fleet status and active shipments.</p>
+      </div>
+      <div class="relative rounded-2xl border border-gray-100 p-7 bg-mist">
+        <span class="absolute top-5 right-5 text-[10px] font-heading font-semibold tracking-wide uppercase bg-gold-light text-gold-deep px-2.5 py-1 rounded-full">Coming Soon</span>
+        <h3 class="font-heading font-semibold text-lg text-charcoal pr-20">Data Analytics</h3>
+        <p class="text-steel text-sm mt-2">Insights on delivery performance and route efficiency.</p>
+      </div>
+      <div class="rounded-2xl bg-charcoal p-7 flex flex-col justify-center">
+        <p class="font-heading font-semibold text-white text-lg">Want early access?</p>
+        <p class="text-white/60 text-sm mt-2">Get in touch and we'll notify you as features launch.</p>
+        <a href="#contact" class="mt-4 inline-flex items-center font-heading font-semibold text-gold text-sm">Contact us →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section id="testimonials" class="py-20 md:py-28 bg-mist">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="font-heading text-gold-deep font-semibold text-sm tracking-wide uppercase">Testimonials</p>
+      <h2 class="font-heading font-bold text-3xl md:text-4xl text-charcoal mt-3">What our customers say.</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+      <div class="bg-white rounded-2xl p-7 shadow-sm border border-gray-100">
+        <div class="flex gap-1 text-gold mb-4">★★★★★</div>
+        <p class="text-charcoal text-sm leading-relaxed">"Sirahauzi has handled our steel shipments for over a year now. Every delivery has arrived on schedule, and their team always keeps us informed."</p>
+        <p class="font-heading font-semibold text-sm text-charcoal mt-5">Rajesh Mehta</p>
+        <p class="text-xs text-steel">Steel Trading Firm, Jamshedpur</p>
+      </div>
+      <div class="bg-white rounded-2xl p-7 shadow-sm border border-gray-100">
+        <div class="flex gap-1 text-gold mb-4">★★★★★</div>
+        <p class="text-charcoal text-sm leading-relaxed">"What stood out was the transparency — clear pricing upfront, no surprises later. Our construction materials reach the site exactly when promised."</p>
+        <p class="font-heading font-semibold text-sm text-charcoal mt-5">Anita Sharma</p>
+        <p class="text-xs text-steel">Construction Contractor, Ranchi</p>
+      </div>
+      <div class="bg-white rounded-2xl p-7 shadow-sm border border-gray-100">
+        <div class="flex gap-1 text-gold mb-4">★★★★★</div>
+        <p class="text-charcoal text-sm leading-relaxed">"We needed a transport partner who understood manufacturing schedules. Sirahauzi's coordination has kept our supply chain running without a single missed delivery."</p>
+        <p class="font-heading font-semibold text-sm text-charcoal mt-5">Vikram Singh</p>
+        <p class="text-xs text-steel">Manufacturing Unit, Pune</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="py-20 md:py-28">
+  <div class="max-w-4xl mx-auto px-5 md:px-8">
+    <div class="text-center max-w-2xl mx-auto">
+      <p class="font-heading text-gold-deep font-semibold text-sm tracking-wide uppercase">FAQ</p>
+      <h2 class="font-heading font-bold text-3xl md:text-4xl text-charcoal mt-3">Common questions.</h2>
+    </div>
+
+    <div class="mt-10 divide-y divide-gray-100 border-t border-b border-gray-100">
+      <details class="group py-5">
+        <summary class="flex justify-between items-center cursor-pointer font-heading font-semibold text-charcoal">
+          Which areas do you provide transport service in?
+          <svg class="w-5 h-5 text-gold-deep group-open:rotate-45 transition-transform" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2"/></svg>
+        </summary>
+        <p class="text-steel text-sm mt-3 leading-relaxed">We operate an all-India network from our base in Jamshedpur, Jharkhand, covering routes to every major state and industrial hub across the country.</p>
+      </details>
+      <details class="group py-5">
+        <summary class="flex justify-between items-center cursor-pointer font-heading font-semibold text-charcoal">
+          How do I book a transport or trailer service?
+          <svg class="w-5 h-5 text-gold-deep group-open:rotate-45 transition-transform" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2"/></svg>
+        </summary>
+        <p class="text-steel text-sm mt-3 leading-relaxed">Call or WhatsApp us directly, fill out the contact form below, or use our Book Transport page. Our team will confirm route, load, and schedule with you before dispatch.</p>
+      </details>
+      <details class="group py-5">
+        <summary class="flex justify-between items-center cursor-pointer font-heading font-semibold text-charcoal">
+          What are your typical delivery timelines?
+          <svg class="w-5 h-5 text-gold-deep group-open:rotate-45 transition-transform" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2"/></svg>
+        </summary>
+        <p class="text-steel text-sm mt-3 leading-relaxed">Timelines depend on route distance and load type. We provide an estimated delivery window at the time of booking and keep you updated if conditions change.</p>
+      </details>
+      <details class="group py-5">
+        <summary class="flex justify-between items-center cursor-pointer font-heading font-semibold text-charcoal">
+          Which industries do you support?
+          <svg class="w-5 h-5 text-gold-deep group-open:rotate-45 transition-transform" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2"/></svg>
+        </summary>
+        <p class="text-steel text-sm mt-3 leading-relaxed">We regularly serve steel, manufacturing, mining, construction, warehousing, and FMCG businesses, along with general industrial cargo transport.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="py-20 md:py-28 bg-charcoal text-white">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 grid lg:grid-cols-2 gap-12">
+    <div>
+      <p class="font-heading text-gold font-semibold text-sm tracking-wide uppercase">Contact Us</p>
+      <h2 class="font-heading font-bold text-3xl md:text-4xl mt-3">Let's plan your next shipment.</h2>
+      <p class="text-white/60 mt-4 max-w-md">Reach out by phone, email, or WhatsApp — or send your shipment details using the form and we'll get back to you promptly.</p>
+
+      <div class="space-y-5 mt-8">
+        <a href="tel:+919973023786" class="flex items-center gap-4 group">
+          <span class="w-11 h-11 rounded-lg bg-white/10 flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1.5 1.5 0 011.5-.36 11 11 0 003.4.6 1.5 1.5 0 011.5 1.5V20a1.5 1.5 0 01-1.5 1.5C10.6 21.5 2.5 13.4 2.5 4A1.5 1.5 0 014 2.5h3.1A1.5 1.5 0 018.6 4a11 11 0 00.6 3.4 1.5 1.5 0 01-.36 1.5L6.6 10.8z" stroke="#F59E0B" stroke-width="1.5"/></svg></span>
+          <span class="font-medium group-hover:text-gold">+91 99730 23786</span>
+        </a>
+        <a href="mailto:contactsirahauzitrailerservice@gmail.com" class="flex items-center gap-4 group">
+          <span class="w-11 h-11 rounded-lg bg-white/10 flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2.5" y="5" width="19" height="14" rx="2" stroke="#F59E0B" stroke-width="1.5"/><path d="M3 6.5l9 6.5 9-6.5" stroke="#F59E0B" stroke-width="1.5"/></svg></span>
+          <span class="font-medium group-hover:text-gold break-all">contactsirahauzitrailerservice@gmail.com</span>
+        </a>
+        <div class="flex items-center gap-4">
+          <span class="w-11 h-11 rounded-lg bg-white/10 flex items-center justify-center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z" stroke="#F59E0B" stroke-width="1.5"/><circle cx="12" cy="9" r="2.4" stroke="#F59E0B" stroke-width="1.5"/></svg></span>
+          <span class="font-medium">Jamshedpur, Jharkhand, India</span>
+        </div>
+      </div>
+
+      <a href="https://wa.me/919973023786" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-8 bg-[#25D366] text-white font-heading font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5.1-1.3A10 10 0 1012 2zm5.7 14.2c-.2.6-1.3 1.2-1.8 1.3-.5.1-1 .1-3-.7-2.5-1-4.1-3.6-4.2-3.8-.1-.2-1-1.3-1-2.5s.6-1.8.8-2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.7.7 1.8.1.1.1.3 0 .4-.2.4-.4.6-.6.9-.2.2-.4.4-.2.8.3.6 1 1.4 1.7 2 .9.8 1.5 1 1.8 1.1.2.1.4.1.5-.1l.8-.9c.2-.3.4-.2.6-.1l1.6.8c.2.1.4.2.4.3.1.2.1.7-.1 1.3z"/></svg>
+        Chat on WhatsApp
+      </a>
+
+      <div class="mt-10 rounded-xl overflow-hidden border border-white/10 aspect-video">
+        <iframe
+          title="Sirahauzi Trailers Service location on Google Maps — Jamshedpur, Jharkhand"
+          class="w-full h-full"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Jamshedpur,Jharkhand,India&output=embed">
+        </iframe>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-2xl p-7 md:p-8 text-charcoal">
+      <h3 class="font-heading font-semibold text-xl">Send a message</h3>
+      <p class="text-steel text-sm mt-1">Tell us about your shipment and we'll respond within one business day.</p>
+      <form class="mt-6 space-y-4" action="/api/contact" method="POST">
+        <div>
+          <label for="name" class="block text-xs font-heading font-semibold text-charcoal mb-1.5">Full name</label>
+          <input id="name" name="name" type="text" required class="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:border-gold focus:ring-1 focus:ring-gold outline-none">
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label for="phone" class="block text-xs font-heading font-semibold text-charcoal mb-1.5">Phone</label>
+            <input id="phone" name="phone" type="tel" required class="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:border-gold focus:ring-1 focus:ring-gold outline-none">
+          </div>
+          <div>
+            <label for="email" class="block text-xs font-heading font-semibold text-charcoal mb-1.5">Email</label>
+            <input id="email" name="email" type="email" class="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:border-gold focus:ring-1 focus:ring-gold outline-none">
+          </div>
+        </div>
+        <div>
+          <label for="route" class="block text-xs font-heading font-semibold text-charcoal mb-1.5">Pickup → Drop location</label>
+          <input id="route" name="route" type="text" placeholder="e.g. Jamshedpur → Bhubaneswar" class="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:border-gold focus:ring-1 focus:ring-gold outline-none">
+        </div>
+        <div>
+          <label for="message" class="block text-xs font-heading font-semibold text-charcoal mb-1.5">Shipment details</label>
+          <textarea id="message" name="message" rows="4" class="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:border-gold focus:ring-1 focus:ring-gold outline-none"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-gold hover:bg-gold-deep text-charcoal font-heading font-semibold px-6 py-3 rounded-lg transition-colors">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-charcoal-900 bg-[#111827] text-white/70 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div>
+      <div class="flex items-center gap-3 mb-4">
+        <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-gold text-charcoal font-heading font-bold">ST</span>
+        <span class="font-heading font-semibold text-white text-sm">SIRAHAUZI<br>TRAILERS SERVICE</span>
+      </div>
+      <p class="text-sm leading-relaxed">All-India trailer and transport logistics, based in Jamshedpur, Jharkhand.</p>
+    </div>
+    <div>
+      <h4 class="font-heading font-semibold text-white text-sm mb-4">Quick Links</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#about" class="hover:text-gold">About Us</a></li>
+        <li><a href="#services" class="hover:text-gold">Services</a></li>
+        <li><a href="#industries" class="hover:text-gold">Industries</a></li>
+        <li><a href="track-shipment.html" class="hover:text-gold">Track Shipment</a></li>
+        <li><a href="fare-calculator.html" class="hover:text-gold">Fare Calculator</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-heading font-semibold text-white text-sm mb-4">Contact</h4>
+      <ul class="space-y-2 text-sm">
+        <li>+91 99730 23786</li>
+        <li class="break-all">contactsirahauzitrailerservice@gmail.com</li>
+        <li>Jamshedpur, Jharkhand, India</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-heading font-semibold text-white text-sm mb-4">Follow Us</h4>
+      <div class="flex gap-3">
+        <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-charcoal"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l.5-3.5H13V8.5c0-1 .5-1.5 1.6-1.5H16V3.8c-.5-.05-1.6-.15-2.6-.15-2.8 0-4.4 1.6-4.4 4.6V10.5H6V14h3v8h4z"/></svg></a>
+        <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-charcoal"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg></a>
+        <a href="https://wa.me/919973023786" aria-label="WhatsApp" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-charcoal"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5.1-1.3A10 10 0 1012 2z"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-5 md:px-8 mt-10 pt-6 border-t border-white/10 text-xs flex flex-col sm:flex-row justify-between gap-2">
+    <p>© <span id="year"></span> Sirahauzi Trailers Service. All rights reserved.<br> Designed, Developed & Maintained by <a href="https://codewarriorlabs.com"><b>CodeWarrior Labs</b></a></p>
+    <p>Jamshedpur, Jharkhand, India</p>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp button -->
+<a href="https://wa.me/919973023786" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"
+   class="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-[#25D366] shadow-lg flex items-center justify-center hover:scale-105 transition-transform">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5.1-1.3A10 10 0 1012 2zm5.7 14.2c-.2.6-1.3 1.2-1.8 1.3-.5.1-1 .1-3-.7-2.5-1-4.1-3.6-4.2-3.8-.1-.2-1-1.3-1-2.5s.6-1.8.8-2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.7.7 1.8.1.1.1.3 0 .4-.2.4-.4.6-.6.9-.2.2-.4.4-.2.8.3.6 1 1.4 1.7 2 .9.8 1.5 1 1.8 1.1.2.1.4.1.5-.1l.8-.9c.2-.3.4-.2.6-.1l1.6.8c.2.1.4.2.4.3.1.2.1.7-.1 1.3z"/></svg>
+</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    const isHidden = mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden');
+    menuBtn.setAttribute('aria-expanded', String(isHidden));
+  });
+  
+</script>
+</body>
+</html>

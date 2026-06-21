@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Track Shipment | Sirahauzi Trailers Service</title>
+<meta name="description" content="Track your trailer or truck load shipment with Sirahauzi Trailers Service. Real-time tracking launching soon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: { colors: {
+    charcoal: { DEFAULT:'#1F2937', 900:'#111827' }, gold:{DEFAULT:'#F59E0B',light:'#FEF3C7',deep:'#B45309'}, steel:'#64748B', mist:'#F8FAFC'
+  }, fontFamily: { heading:['Poppins','sans-serif'], body:['Inter','sans-serif'] } } } }
+</script>
+<style>
+  body{font-family:'Inter',sans-serif;color:#1F2937;}
+  h1,h2,h3,.font-heading{font-family:'Poppins',sans-serif;}
+  .route-line{background-image:repeating-linear-gradient(to right,#F59E0B 0,#F59E0B 10px,transparent 10px,transparent 20px);height:3px;}
+  *:focus-visible{outline:2px solid #F59E0B;outline-offset:2px;}
+</style>
+</head>
+<body class="bg-mist min-h-screen flex flex-col">
+
+<header class="bg-white border-b border-gray-100">
+  <div class="max-w-5xl mx-auto px-5 md:px-8 h-20 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3">
+  <img
+    src="/assets/sts-logo.png"
+    alt="STS Logo"
+    class="h-12 w-auto"
+  />
+
+  <span class="font-heading font-bold text-xl text-charcoal">
+    SIRAHAUZI <span class="text-steel">TRAILERS SERVICE</span>
+  </span>
+</a>
+    <a href="/" class="font-heading text-sm font-semibold text-charcoal hover:text-gold-deep">← Back to Home</a>
+  </div>
+</header>
+
+<main class="flex-1 max-w-3xl mx-auto px-5 md:px-8 py-16 md:py-24 w-full">
+  <p class="font-heading text-gold-deep font-semibold text-sm tracking-wide uppercase">Track Shipment</p>
+  <h1 class="font-heading font-extrabold text-3xl md:text-4xl text-charcoal mt-3">Know where your shipment is.</h1>
+  <div class="route-line w-24 mt-5"></div>
+  <p class="text-steel mt-6 max-w-xl leading-relaxed">
+    Live, map-based shipment tracking is part of our digital platform rollout. Until it's live, enter your booking ID below and our team will share a manual status update, or contact us directly for the fastest response.
+  </p>
+
+  <form class="bg-white rounded-2xl border border-gray-100 shadow-sm p-7 mt-10 space-y-4" action="/api/track" method="GET">
+    <h2 class="font-heading font-semibold text-lg text-charcoal mb-2">Check shipment status</h2>
+    <div>
+      <label for="bookingId" class="block text-xs font-heading font-semibold text-charcoal mb-1.5">Booking ID or phone number</label>
+      <input id="bookingId" name="bookingId" type="text" placeholder="e.g. ST-10234" class="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:border-gold focus:ring-1 focus:ring-gold outline-none">
+    </div>
+    <button type="submit" class="w-full bg-gold hover:bg-gold-deep text-charcoal font-heading font-semibold px-6 py-3 rounded-lg transition-colors">Check Status</button>
+  </form>
+
+  <div class="mt-10 bg-charcoal text-white rounded-2xl p-7">
+    <p class="font-heading font-semibold">Real-time tracking — coming soon</p>
+    <p class="text-white/60 text-sm mt-1">Live map view of your shipment's location, with status updates at every stop.</p>
+  </div>
+
+  <div class="mt-6 flex flex-wrap gap-4">
+    <a href="tel:+919973023786" class="font-heading font-semibold text-sm text-charcoal underline">Call +91 99730 23786</a>
+    <a href="https://wa.me/919973023786" target="_blank" rel="noopener" class="font-heading font-semibold text-sm text-charcoal underline">WhatsApp us</a>
+  </div>
+</main>
+
+<footer class="bg-[#111827] text-white/60 text-center text-xs py-6">
+  <p>© <span id="year"></span> Sirahauzi Trailers Service. All rights reserved.<br> Designed, Developed & Maintained by <a href="https://codewarriorlabs.com"><b>CodeWarrior Labs</b></a></p>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
