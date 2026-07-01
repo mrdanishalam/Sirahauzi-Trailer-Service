@@ -658,8 +658,16 @@ transition:none!important;
     <div class="bg-white rounded-2xl p-7 md:p-8 text-charcoal">
       <h3 class="font-heading font-semibold text-xl">Send a message</h3>
       <p class="text-steel text-sm mt-1">Tell us about your shipment and we'll respond within one business day.</p>
-      <form class="mt-6 space-y-4" action="/api/contact" method="POST">
-        <div>
+      <form class="mt-6 space-y-4" action="https://api.web3forms.com/submit" method="POST">
+
+  <input type="hidden" name="access_key" value="0a77fd6e-f051-4e3d-b688-9894c5555236">
+
+  <input type="hidden" name="subject" value="🚛 New Contact Form Enquiry - Sirahauzi Trailers Service">
+
+  <input type="hidden" name="from_name" value="Sirahauzi Trailers Website">
+
+  <input type="hidden" name="botcheck" style="display:none;">
+    <div>
           <label for="name" class="block text-xs font-heading font-semibold text-charcoal mb-1.5">Full name</label>
           <input id="name" name="name" type="text" required class="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:border-gold focus:ring-1 focus:ring-gold outline-none">
         </div>
