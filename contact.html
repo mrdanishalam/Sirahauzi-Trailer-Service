@@ -90,27 +90,87 @@
       <div class="bg-white rounded-2xl p-7 md:p-8 text-charcoal">
         <h2 class="font-heading font-semibold text-xl">Send a message</h2>
         <p class="text-steel text-sm mt-1">Tell us about your shipment and we'll respond within one business day.</p>
-        <form class="mt-6 space-y-4" action="/api/contact" method="POST">
-          <div>
-            <label for="name" class="block text-xs font-heading font-semibold text-charcoal mb-1.5">Full name</label>
-            <input id="name" name="name" type="text" required class="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:border-gold focus:ring-1 focus:ring-gold outline-none">
-          </div>
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label for="phone" class="block text-xs font-heading font-semibold text-charcoal mb-1.5">Phone</label>
-              <input id="phone" name="phone" type="tel" required class="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:border-gold focus:ring-1 focus:ring-gold outline-none">
-            </div>
-            <div>
-              <label for="email" class="block text-xs font-heading font-semibold text-charcoal mb-1.5">Email</label>
-              <input id="email" name="email" type="email" class="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:border-gold focus:ring-1 focus:ring-gold outline-none">
-            </div>
-          </div>
-          <div>
-            <label for="message" class="block text-xs font-heading font-semibold text-charcoal mb-1.5">Shipment details</label>
-            <textarea id="message" name="message" rows="4" class="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:border-gold focus:ring-1 focus:ring-gold outline-none"></textarea>
-          </div>
-          <button type="submit" class="w-full bg-gold hover:bg-gold-deep text-charcoal font-heading font-semibold px-6 py-3 rounded-lg transition-colors">Send Message</button>
-        </form>
+       <form class="mt-6 space-y-4" action="https://api.web3forms.com/submit" method="POST">
+
+  <!-- Web3Forms Access Key -->
+  <input type="hidden" name="access_key" value="0a77fd6e-f051-4e3d-b688-9894c5555236">
+
+  <!-- Email Subject -->
+  <input type="hidden" name="subject" value="🚛 New Contact Form Enquiry - Sirahauzi Trailers Service">
+
+  <!-- Sender Name -->
+  <input type="hidden" name="from_name" value="Sirahauzi Trailers Website">
+
+  <!-- Disable Captcha (optional) -->
+  <input type="hidden" name="botcheck" style="display:none;">
+
+  <div>
+    <label for="name" class="block text-xs font-heading font-semibold text-charcoal mb-1.5">
+      Full Name
+    </label>
+
+    <input
+      id="name"
+      name="name"
+      type="text"
+      required
+      class="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:border-gold focus:ring-1 focus:ring-gold outline-none">
+  </div>
+
+  <div class="grid sm:grid-cols-2 gap-4">
+
+    <div>
+      <label for="phone" class="block text-xs font-heading font-semibold text-charcoal mb-1.5">
+        Phone
+      </label>
+
+      <input
+        id="phone"
+        name="phone"
+        type="tel"
+        required
+        class="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:border-gold focus:ring-1 focus:ring-gold outline-none">
+    </div>
+
+    <div>
+      <label for="email" class="block text-xs font-heading font-semibold text-charcoal mb-1.5">
+        Email
+      </label>
+
+      <input
+        id="email"
+        name="email"
+        type="email"
+        required
+        class="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:border-gold focus:ring-1 focus:ring-gold outline-none">
+    </div>
+
+  </div>
+
+  <div>
+
+    <label for="message" class="block text-xs font-heading font-semibold text-charcoal mb-1.5">
+      Shipment Details
+    </label>
+
+    <textarea
+      id="message"
+      name="message"
+      rows="4"
+      required
+      class="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:border-gold focus:ring-1 focus:ring-gold outline-none"></textarea>
+
+  </div>
+
+  <button
+    type="submit"
+    class="w-full bg-gold hover:bg-gold-deep text-charcoal font-heading font-semibold px-6 py-3 rounded-lg transition-colors">
+
+    Send Message
+
+  </button>
+
+</form>
       </div>
     </div>
   </section>
